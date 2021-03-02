@@ -1,0 +1,128 @@
+body{
+    font-family: "Source Sans Pro",sans-serif;
+}
+#hero{
+    background: url("../vendor/img/french-bull.jpg") no-repeat center center;
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#header{
+    padding-top: 15px;
+}
+#header .container .nav-menu li{
+    list-style: none;
+    display: inline;
+}
+#header .container .nav-menu li a {
+    text-decoration: none;
+}
+#header .container .nav-menu li .nav-link{
+    font-size: 15px;
+    display: inline;
+    font-weight: 0;
+    color: #fff;
+    letter-spacing:  0.1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+/*
+
+
+*/
+#display{
+    height: 120vh;
+    width: 100%;
+}
+#display .row{
+    width: 100%;
+    padding-top: 8rem;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+#display .dog-mag-cover{
+    height: 684.2px;
+    width: 507.5px;
+}
+#display .row .head-container .head-text{
+    color: #1f2021;
+    font-weight: 400;
+    font-size: 2.57143em;
+    display: block;
+    text-align: center;
+}
+#display .row .price-container{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#display .row .price-container .price-txt{
+    font-size: 1.28571em;
+    color: #1f2021;
+    padding-top: 10px;
+}
+
+#display .row .divider-container .divider{
+    width: 50px;
+    border: solid #1f2021 0.8px;
+}
+
+#display .row .button-container{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#display .row .button-container a{
+    text-decoration: none;
+}
+
+#display .row .button-container .addtocart{
+    font-size: 0.92857em;
+    color: #1f2021;
+    border: solid 1px #1f2021;
+    padding: 12px 30px;
+    letter-spacing: 0.1rem;
+}
+/* For Hover effect of the button*/
+#display .row .button-container .addtocart:hover{
+    background: #1f2021;
+    color: #fff;
+}
+#display .row .button-container .buynow{
+    font-size: 0.92857em;
+    color: #fff;
+    border: solid 1px #1f2021;
+    padding: 12px 30px;
+    background: #1f2021;
+    letter-spacing: 0.1rem;
+}
+/* For Hover effect of the button*/
+#display .row .button-container .buynow:hover{
+    background: transparent;
+    color: #1f2021;
+}
+#display .row .readmore-container{
+    padding-top: 80px;
+    width: 100%;
+}
+#display .row .readmore-container a{
+    text-decoration: none;
+}
+
+#display .row .readmore-container .readmore{
+    color: #a6a5a3;
+    display: flex;
+    justify-content: center;
+}
+#display .row .readmore-container .readmore:hover{
+    color: #1f2021;
+}
