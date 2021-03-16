@@ -7,9 +7,13 @@ body{
     width: auto;
     background-size: cover;
     background-attachment: fixed;
+    z-index: 994;
 }
-#header{
+.header{
     padding-top: 15px;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100px;
 }
 #header .container .nav-menu li{
     list-style: none;
@@ -26,17 +30,115 @@ body{
     letter-spacing:  0.1rem;
     margin-left: 10px;
     margin-right: 10px;
+    transition: all ease 0.4s;
 }
 
 
+.header h1{
+    margin-top: -10px;
+}
+.nav-menu{
+    padding-top: 25px !important;
+}
 
+/*  For Menu btn Styling*/
+@media(min-width: 801px){
+    .menu-btn{
+        display: none;
+    }
+    .header.sticky h1 img{
+        margin-top: -35px !important;
+        transition: all ease 0.4s;
+    }
 
+}
+@media(max-width:800px){
+     #header .menu{    
+        width: 100%;
+        background: #a6a5a3;
+        height: 110vh;
+        position: fixed;
+        margin-top: -40px;
+        left: 100%;
+        padding-top: 60px;
+        display: block;
+        text-align: center;
+        transition: all ease-in-out 0.4s;
+        z-index: 990;
+    }
+    
+    .menu a{
+        padding-top: 40px;
+        display: none !important;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0%;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        width: auto;
+        justify-content: center;
+        font-size: 22px !important;
+    }
+    #header{
+        padding-top: 0;
+    }
+    #header .menu.active{
+        left: 0;
+    }
+    #header h1 img{
+        margin-left: 10px;
+        padding-top: 30px;
+    }
+}
+
+.menu-btn{
+    color: #fff;
+    position: fixed;
+    z-index: 999;
+    margin-left: -30px;
+    margin-top: 15px;
+    font-size: 22px;
+}
+.menu-btn i.active:before{
+    content: "\f00d";
+    z-index: 999;
+}
+.menu.active .nav-link{
+    display: block !important;
+    justify-content: center;
+}
+.navbar ul.menu.active:before{
+    left: 100%;
+}
+.header h1 img{
+    position: fixed;
+    z-index: 981;
+}
+.header.sticky{
+    position: fixed;
+    z-index: 980;
+    background: #37b9f1;
+    background: Linear-gradient( 200deg, #406BD8 0%, #9CDBEF 100%);
+    height: 80px;
+    width: 100%;
+}
+.header.sticky h1 img{
+    padding-top: 15px !important;
+    transition: all ease 0.4s;
+}
+.header.sticky .menu{
+    margin-top: -10px !important;
+}
+.header.sticky .menu-btn{
+    margin-top: -2px !important;
+    transition: all ease 0.4s;
+}
 /*
 
 
 */
 #display{
-    height: 120vh;
+    height: 150vh;
     width: 100%;
 }
 #display .row{
@@ -89,26 +191,32 @@ body{
     font-size: 0.92857em;
     color: #1f2021;
     border: solid 1px #1f2021;
+    border-radius: 15px;
     padding: 12px 30px;
     letter-spacing: 0.1rem;
+    cursor: default;
 }
 /* For Hover effect of the button*/
 #display .row .button-container .addtocart:hover{
     background: #1f2021;
     color: #fff;
+    transition: all ease 0.4s;
 }
 #display .row .button-container .buynow{
     font-size: 0.92857em;
     color: #fff;
     border: solid 1px #1f2021;
+    border-radius: 15px;
     padding: 12px 30px;
     background: #1f2021;
     letter-spacing: 0.1rem;
+    cursor: default;
 }
 /* For Hover effect of the button*/
 #display .row .button-container .buynow:hover{
     background: transparent;
     color: #1f2021;
+    transition:  all ease 0.4s;
 }
 #display .row .readmore-container{
     padding-top: 80px;
@@ -116,6 +224,7 @@ body{
 }
 #display .row .readmore-container a{
     text-decoration: none;
+    cursor: default;
 }
 
 #display .row .readmore-container .readmore{
@@ -125,4 +234,35 @@ body{
 }
 #display .row .readmore-container .readmore:hover{
     color: #1f2021;
+    transition: all ease 0.4s;
+}
+
+
+/*
+    Responsive media queires startedS
+*/
+@media(max-width:780px){
+    #display{
+        height: 180vh;
+    }
+    #display .row{
+        padding-top: 6rem;
+        padding-left: 0%;
+        padding-right:0%;
+        align-items: center;
+
+    }
+    
+    #display .dog-mag-cover{
+        height: 80%;
+        width: 90%;
+        margin-left: 9%;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    #display .row .head-container .head-text{
+        padding-top: 2rem;
+    }
 }
