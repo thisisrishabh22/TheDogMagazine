@@ -3,8 +3,10 @@ $(document).ready(function(){
         // sticky navbar on scroll script
         if(this.scrollY > 20){
             $('.header').addClass("sticky");
+            $('.txt-container').addClass("sticky");
         }else{
             $('.header').removeClass("sticky");
+            $('.txt-container').removeClass("sticky");
         }
     });
 

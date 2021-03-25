@@ -50,6 +50,12 @@ body{
         margin-top: -35px !important;
         transition: all ease 0.4s;
     }
+    .header.sticky .menu.active .nav-link{
+        display: inline !important;
+    }
+    .header .menu.active .nav-link{
+        display: inline !important;
+    }
 
 }
 @media(max-width:800px){
@@ -60,11 +66,12 @@ body{
         position: fixed;
         margin-top: -40px;
         left: 100%;
-        padding-top: 60px;
+        padding-top: 100px;
         display: block;
         text-align: center;
         transition: all ease-in-out 0.4s;
         z-index: 990;
+        top: -10px;
     }
     
     .menu a{
@@ -84,6 +91,7 @@ body{
     }
     #header .menu.active{
         left: 0;
+        top: -10px;
     }
     #header h1 img{
         margin-left: 10px;
@@ -128,17 +136,14 @@ body{
 }
 .header.sticky .menu{
     margin-top: -10px !important;
+    transition: all ease 0.4s;
 }
 .header.sticky .menu-btn{
     margin-top: -2px !important;
     transition: all ease 0.4s;
 }
-/*
-
-
-*/
 #display{
-    height: 150vh;
+    height: 130vh;
     width: 100%;
 }
 #display .row{
@@ -146,12 +151,12 @@ body{
     padding-top: 8rem;
     display: flex;
     justify-content: space-around;
-    padding-left: 15%;
-    padding-right: 10%;
+    padding-left: 10%;
+    padding-right: 5%;
 }
 #display .dog-mag-cover{
-    height: 684.2px;
-    width: 507.5px;
+    /* height: 684.2px; */
+    width: 100%;
 }
 #display .row .head-container .head-text{
     color: #1f2021;
@@ -171,7 +176,7 @@ body{
     padding-top: 10px;
 }
 
-#display .row .divider-container .divider{
+#display .divider-container .divider{
     width: 50px;
     border: solid #1f2021 0.8px;
 }
@@ -188,7 +193,7 @@ body{
 }
 
 #display .row .button-container .addtocart{
-    font-size: 0.92857em;
+    font-size: 13px;
     color: #1f2021;
     border: solid 1px #1f2021;
     border-radius: 15px;
@@ -237,6 +242,45 @@ body{
     transition: all ease 0.4s;
 }
 
+#display .col-md-6 .row{
+    padding-top: 45px;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+#display .social-container{
+    /* padding-left: 40px; */
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+}
+#display .social-container a{
+    text-decoration: none;
+    color: #1f2021;
+}
+#display .social-container .col-sm-4:hover{
+    transform: scale(1.08);
+    transition: all ease-in-out 0.4s;
+}
+#display .social-container i::before{
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}
+#display .social-container span{
+    font-family: "Source Sans Pro",sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+#display .divider-container.second{
+    position: relative;
+    top: 80px;
+}
+#display .divider-container.second .divider{
+    width: 50px;
+    border: solid #1f2021 0.1px;
+    color: #1f2021;
+    background: #1f2021;
+}    
 
 /*
     Responsive media queires startedS
@@ -266,3 +310,135 @@ body{
         padding-top: 2rem;
     }
 }
+
+/*  Footer Section Styling  */
+#footer{
+    width: 100%;
+    height: 190px;
+}
+#footer .social-container{
+    padding-left: 10%;
+    padding-top: 40px;
+}
+#footer .social-container ul{
+    list-style: none;
+    padding-left: 0;
+}
+#footer .social-container a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #1f2021;
+    font-size: 14px !important;
+}
+/* 
+---------------Contact styling
+*/
+.hero.contact{
+    background: #fff !important;
+    height: 100px !important;
+}
+.hero.contact .header .nav-link{
+    color: #1f2021 !important;
+}
+.hero.contact .header .menu-btn{
+    color: #1f2021 !important;
+}
+.hero.contact .header.sticky .nav-link{
+    color: #fff !important;
+}
+.hero.contact .header.sticky .menu-btn{
+    color: #fff !important;
+}
+/* Contact Form Styling  */
+#contact{
+    width: 100%;
+    height: 110vh;
+    padding-top: 60px;
+}
+#contact h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 400;
+}
+#contact .divider-container{
+    padding-top: 40px;
+}
+#contact .divider-container hr{
+    width: 60px;
+    color: #1f2021;
+    background: #1f2021;
+    border: 0.1px #1f2021 solid;
+}
+#contact form{
+    padding-top: 50px;
+}
+#contact .txt-col input{
+    width: 310.89px; 
+    height: 46px;
+    display: flex;
+    background: #f6f6f6;
+    border: 0px solid;
+    border-radius: 4px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+/* Input Hovering */
+
+#contact .txt-col .email{
+    margin-top: 11px;
+}
+#contact .txt-col .phone{
+    display: flex;
+    margin-top: 11px;
+}
+#contact .txt-col .message{
+    display: flex;
+    margin-top: 11px;
+    width: 100%;
+    background: #f6f6f6;
+    border-radius: 4px;
+    border: 0px;
+    height: 200px;
+    padding-left: 15px;
+    padding-top: 10px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+#contact .btn-container{
+    display: flex;
+    justify-content: right;
+    padding-top: 10px;
+}
+#contact .btn{
+    background: #1f2021;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    font-size: 14.85712px;
+    
+    margin-left: auto;
+    margin-right: 0;
+}
+/* Responsive Designing for Contact Section */
+@media(min-width:992px){
+    #contact form .txt-col{
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+@media(max-width:992px){
+    #contact form .txt-col{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+@media(max-width:460px){
+    #contact form .txt-col{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+/* Input Hover And Button Hover styling is to done !!!! */
