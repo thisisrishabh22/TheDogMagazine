@@ -142,16 +142,17 @@ body{
     transition: all ease 0.4s;
 }
 #display{
-    height: 130vh;
+    height: 100%;
     width: 100%;
+    padding-bottom: 10%;
 }
 #display .row{
     width: 100%;
     padding-top: 8rem;
     display: flex;
     justify-content: space-around;
-    padding-left: 10%;
-    padding-right: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #display .dog-mag-cover{
     /* height: 684.2px; */
@@ -286,20 +287,19 @@ body{
 */
 @media(max-width:780px){
     #display{
-        height: 180vh;
+        height: 100%;
+        padding-bottom: 20%;
     }
     #display .row{
         padding-top: 6rem;
-        padding-left: 0%;
-        padding-right:0%;
         align-items: center;
 
     }
     
     #display .dog-mag-cover{
-        height: 80%;
         width: 90%;
-        margin-left: 9%;
+        margin-left: auto;
+        margin-right: auto;
         display: flex;
         justify-content: center;
         
@@ -307,6 +307,39 @@ body{
 
     #display .row .head-container .head-text{
         padding-top: 2rem;
+    }
+}
+@media(max-width:600px){
+    #display{
+        height: 100% !important;
+        padding-bottom: 15%;
+    }
+    #display .social-container{
+        padding-left: 0 ;
+    }
+    #display .social-container .row{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #display .social-container .col-sm-4{
+        width: auto;
+    }
+}
+@media(max-width:500px){
+    #display{
+        height: 100% !important;
+        padding-bottom: 15%;
+    }
+}
+@media(max-width:420px){
+    #display{
+        height: 100% !important;
+    }
+}
+@media(max-width:340px){
+    #display .button-container .addtocart,.buynow{
+        padding: 10px 20px !important;
+        font-size: 0.73em !important;
     }
 }
 
@@ -377,7 +410,7 @@ body{
     height: 46px;
     display: flex;
     background: #f6f6f6;
-    border: 0px solid;
+    border: transparent 1px solid;
     border-radius: 4px;
     padding-left: 15px;
     margin-left: auto;
@@ -385,7 +418,14 @@ body{
     width: 100%;
 }
 /* Input Hovering */
-
+#contact .txt-col input:hover{
+    border: #1f2021 solid 1px;
+    border-radius: 4px;
+}
+#contact .txt-col .message:hover{
+    border: #1f2021 solid 1px;
+    border-radius: 4px;
+}
 #contact .txt-col .email{
     margin-top: 11px;
 }
@@ -399,7 +439,7 @@ body{
     width: 100%;
     background: #f6f6f6;
     border-radius: 4px;
-    border: 0px;
+    border: 1px transparent solid;
     height: 200px;
     padding-left: 15px;
     padding-top: 10px;
@@ -412,14 +452,20 @@ body{
     padding-top: 10px;
 }
 #contact .btn{
-    background: #1f2021;
-    color: #fff;
+    background: transparent;
+    color: #1f2021;
     text-transform: uppercase;
-    padding: 12px 20px;
+    padding: 12px 30px;
     font-size: 14.85712px;
-    
+    border-radius: 18px;
+    border: #1f2021 solid 1.6px;
     margin-left: auto;
     margin-right: 0;
+}
+#contact .btn:hover{
+    background: #1f2021;
+    color: #fff;
+    transition: all ease-in-out 0.4s;
 }
 /* Responsive Designing for Contact Section */
 @media(min-width:992px){
@@ -440,4 +486,96 @@ body{
         margin-right: 10%;
     }
 }
-/* Input Hover And Button Hover styling is to done !!!! */
+
+/* 
+---------------Shop styling
+*/
+.hero.shop{
+    background: #fff !important;
+    height: 100px !important;
+}
+.hero.shop .header .nav-link{
+    color: #1f2021 !important;
+}
+.hero.shop .header .menu-btn{
+    color: #1f2021 !important;
+}
+.hero.shop .header.sticky .nav-link{
+    color: #fff !important;
+}
+.hero.shop .header.sticky .menu-btn{
+    color: #fff !important;
+}
+#shop-hero{
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+#shop-hero h1{
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+#shop-hero .divider-container{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+#shop-hero .divider-container hr{
+    width: 60px;
+    background: #1f2021;
+}
+#shop-hero .img-container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#shop-hero .img-container .content{
+    display: flex;
+    /* background: #37b9f1; */
+    width: 100%;
+    flex-direction: row;
+}
+#shop-hero .mag-container{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#shop-hero .mag-container img{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 210.67px;
+}
+#shop-hero .mag-container p{
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    color: #1f2021;
+    margin-top: 3px;
+}
+#shop-hero .mag-container span{
+    font-size: 14px;
+}
+#shop-hero .mag-container.ghost{
+    visibility: hidden;
+}
+/* Responsive Design For Shop Page */
+@media(max-width:880px){
+    #shop-hero .img-container{
+        margin-right: 8%;
+        margin-left: 8%;
+    }   
+}
+@media(max-width: 801px){
+    #shop-hero .img-container .content{
+        display: flex;
+        flex-direction: column !important;
+    }
+    #shop-hero .content .mag-container.ghost{
+        display: none;
+    }
+}
